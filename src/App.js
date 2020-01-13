@@ -16,19 +16,18 @@ const App = () => {
 
   useEffect(() => {
     // Initiate get trains on app load, and then every 10 seconds afterwards.
-    const fetchData = async isForUpdate => {
+    const fetchTrainPositions = async () => {
       const trainPositions = await getTrainPositions()
-      if (isForUpdate) {
-      }
+
       setTrainData(trainPositions.data.TrainPositions)
     }
 
-    fetchData()
+    fetchTrainPositions()
 
     // Auto update Train positions. WMATA data is updated every 7-10 seconds.
 
     setInterval(() => {
-      fetchData(true)
+      fetchTrainPositions(true)
     }, 10000)
   }, [])
 
