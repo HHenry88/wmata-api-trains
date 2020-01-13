@@ -47,6 +47,15 @@ See the section about [running tests](https://facebook.github.io/create-react-ap
 
 8. As a user I'd like to see the page automatically update as the trains' positions update.
 
+## Libraries used
+
+1. react
+2. jest
+3. axios
+4. cheerio
+5. react-table
+6. styled-components
+
 ## Author
 
 **Henry Han** - [Github](https://github.com/HHenry88)
